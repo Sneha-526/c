@@ -1,0 +1,43 @@
+#include<stdio.h>
+void main()
+{
+    int n, i, j, k, s, a;
+    printf("Enter the value of n\n");
+    scanf("%d",&n);
+    s=n/2;
+    for(i=0;i<=n/2;i++)
+    {   
+        a=1;
+        for(k=0;k<s;k++)
+        {
+            printf("\t");
+        }
+        for(j=0;j<2*i+1;j++)
+        {
+            if(j<=i/2)
+                printf("%d\t",a++);
+            else
+                printf("%d\t",a--);
+        }
+        printf("\n");
+        s--;
+    }
+    s=1;
+    for(i=n/2;i>0;i--)
+    {   
+        a=0;
+        for(k=0;k<s;k++)
+        {
+            printf("\t");
+        }
+        for(j=0;j<(3*i)/2;j++)
+        {
+            if(j<n/2)
+                printf("%d\t",++a);
+            else
+                printf("%d\t",--a);
+        }
+        printf("\n");
+        s++;
+    }
+}
